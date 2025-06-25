@@ -171,8 +171,7 @@ fn build_rocksdb() -> Build {
             .register_dep("SNAPPY")
             .define("WITH_SNAPPY", "ON");
     } else {
-        cfg.generator("Visual Studio 15 2017")
-            .cxxflag("/MP")
+        cfg.cxxflag("/MP")
             .register_dep("LZ4")
             .define("WITH_LZ4", "ON")
             .register_dep("SNAPPY")
